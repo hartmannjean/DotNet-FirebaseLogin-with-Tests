@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: FirebaseLogin-CSharp.sln # Nome do seu arquivo de solução
+      Solution_Name: FirebaseLogin.sln
       #Test_Project_Path: Caminho/Para/Teste # Caminho para o projeto de testes, se houver
 
     steps:
