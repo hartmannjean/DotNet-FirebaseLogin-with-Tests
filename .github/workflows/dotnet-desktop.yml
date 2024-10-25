@@ -19,8 +19,8 @@ jobs:
     env:
       Solution_Name: FirebaseLogin.sln                         
       #Test_Project_Path: Caminho/Para/SeuTeste/Projeto.Tests.csproj
-      Wap_Project_Directory: Caminho/Para/ProjetoWap
-      Wap_Project_Path: Caminho/Para/ProjetoWap/ProjetoWap.wapproj
+      Wap_Project_Directory: FirebaseLogin/FirebaseLogin.Package
+      Wap_Project_Path: FirebaseLogin/FirebaseLogin.Package/FirebaseLogin.wapproj
 
     steps:
     - name: Checkout
