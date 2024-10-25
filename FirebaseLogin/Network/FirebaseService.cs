@@ -8,8 +8,13 @@ namespace FirebaseLogin.Network
 {
     public class FirebaseService{
         private static readonly string API_KEY = "AIzaSyA41Y0Ud91dGQLMjQ2y8CPDiQ9UgDOsWpQ";
+        private readonly HttpClient _httpClient;
 
-        public async Task<string> LoginWithEmailAndPassword(string email, string password)
+        public FirebaseService(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+            public async Task<string> LoginWithEmailAndPassword(string email, string password)
         {
             var client = new HttpClient();
             var url = $"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={API_KEY}";
@@ -22,7 +27,7 @@ namespace FirebaseLogin.Network
             var jsonPayload = JsonConvert.SerializeObject(payload);
             var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync(url, content);
+            var response = await _httpClient.PostAsync(url, content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -33,7 +38,7 @@ namespace FirebaseLogin.Network
             else
             {
                 var errorResponse = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Erro ao fazer login: {errorResponse}");
+                throw new Exception("Não autenticado");
             }
 
         }

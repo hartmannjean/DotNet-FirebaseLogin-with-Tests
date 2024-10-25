@@ -1,14 +1,19 @@
 using FirebaseLogin.Network;
 
-namespace FirebaseLogin
-{
-    public partial class Login : Form{
-        public Login(){
-            InitializeComponent();
-        }
-        private FirebaseService authService = new FirebaseService();
+namespace FirebaseLogin {
+    public partial class Login : Form {
+        private FirebaseService authService;
 
-        private async void btnLogin_Click(object sender, EventArgs e){
+        public Login()
+        {
+            InitializeComponent();
+            // Crie um HttpClient e passe-o para o FirebaseService
+            var httpClient = new HttpClient();
+            authService = new FirebaseService(httpClient);
+        }
+
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 

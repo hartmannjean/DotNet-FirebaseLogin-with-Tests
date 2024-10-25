@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseLogin", "FirebaseLogin\FirebaseLogin.csproj", "{9508A06C-F052-403A-A165-28D6733F8F2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirebaseLogin", "FirebaseLogin\FirebaseLogin.csproj", "{9508A06C-F052-403A-A165-28D6733F8F2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirebaseLogin.Tests", "FirebaseLogin.Tests\FirebaseLogin.Tests.csproj", "{E51105E8-2681-4CA5-89B7-FED5FF92CD0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9508A06C-F052-403A-A165-28D6733F8F2F} = {9508A06C-F052-403A-A165-28D6733F8F2F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{9508A06C-F052-403A-A165-28D6733F8F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9508A06C-F052-403A-A165-28D6733F8F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9508A06C-F052-403A-A165-28D6733F8F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E51105E8-2681-4CA5-89B7-FED5FF92CD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E51105E8-2681-4CA5-89B7-FED5FF92CD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E51105E8-2681-4CA5-89B7-FED5FF92CD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E51105E8-2681-4CA5-89B7-FED5FF92CD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
