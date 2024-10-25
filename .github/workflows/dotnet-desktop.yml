@@ -16,7 +16,7 @@ jobs:
 
     env:
       Solution_Name: FirebaseLogin-CSharp.sln # Nome do seu arquivo de solução
-      Test_Project_Path: Caminho/Para/Teste # Caminho para o projeto de testes, se houver
+      #Test_Project_Path: Caminho/Para/Teste # Caminho para o projeto de testes, se houver
 
     steps:
     - name: Checkout
