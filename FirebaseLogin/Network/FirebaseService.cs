@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 namespace FirebaseLogin.Network
 {
     public class FirebaseService{
-        private static readonly string API_KEY = "AIzaSyA41Y0Ud91dGQLMjQ2y8CPDiQ9UgDOsWpQ";
+        private static readonly string API_KEY = "";
         private readonly HttpClient _httpClient;
 
         public FirebaseService(HttpClient httpClient)
